@@ -1,4 +1,4 @@
-﻿@page "/"
+@page "/"
 
 @using Syncfusion.Blazor.Lists
 @using System.Xml.Linq;
@@ -24,7 +24,7 @@
     // Read the XML file and extract the data
     private async Task GetData()
     {
-        var xmlFilePath = "Pages/XMLFile.xml"; // Replace with the actual path
+        var xmlFilePath = "Components/Pages/XMLFile.xml"; // Replace with the actual path
         var xmlContent = await File.ReadAllTextAsync(xmlFilePath);
         var xmlDoc = XDocument.Parse(xmlContent);
         Data = xmlDoc.Descendants("item")
